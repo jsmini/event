@@ -1,22 +1,10 @@
-# [event.js](https://github.com/yanhaijing/event.js) [![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/yanhaijing/jslib-base) [![npm](https://img.shields.io/badge/npm-0.1.1-orange.svg)](https://www.npmjs.com/package/jslib-base) [![Build Status](https://travis-ci.org/yanhaijing/event.js.svg?branch=master)](https://travis-ci.org/yanhaijing/event.js) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yanhaijing/event.js/blob/master/LICENSE)
-最好用的js第三方库脚手架，fork或clone本仓库，即可搭建完成一个新库的基础框架
-
-## 特性
-
-- ES6编写源码，编译生成生产代码
-- 第三方依赖自动注入
-- 支持浏览器原生
-- 支持AMD，CMD
-- 支持Webpack，Rollup，fis等
-- 支持Node
-- 集成单元测试环境
-- 集成eslint
-- 集成[travis-ci](https://www.travis-ci.org/)
+# [event.js](https://github.com/yanhaijing/event.js) [![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/yanhaijing/jslib-base) [![npm](https://img.shields.io/badge/npm-0.1.1-orange.svg)](https://www.npmjs.com/package/event_js) [![Build Status](https://travis-ci.org/yanhaijing/event.js.svg?branch=master)](https://travis-ci.org/yanhaijing/event.js) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yanhaijing/event.js/blob/master/LICENSE)
+最好用的事件发射器基类和事件中心
 
 ## 兼容性
 单元测试保证支持如下环境：
 
-- Node 4+
+- Node 0.12+
 - Safari 6+ (Mac)
 - iOS 5+ Safari
 - Chrome 23+ (Windows, Mac, Android, iOS, Linux, Chrome OS)
@@ -41,37 +29,49 @@
 通过npm下载安装代码
 
 ```bash
-$ npm install --save jslib_base
+$ npm install --save event_js
 ```
 
 如果你是node环境
 
 ```js
-var base = require('jslib_base');
+var EventEmitter = require('event_js').EventEmitter;
+
+var ec = new EventEmitter();
 ```
 
 如果你是webpack等环境
 
 ```js
-import base from 'jslib_base';
+import { EventEmitter } from 'event_js';
+
+var ec = new EventEmitter();
 ```
 
 如果你是requirejs环境
 
 ```js
-requirejs(['node_modules/jslib_base/dist/index.aio.js'], function (base) {
-    // xxx
+requirejs(['node_modules/event_js/dist/index.aio.js'], function (event_js) {
+    var EventEmitter = event_js.EventEmitter;
+
+    var ec = new EventEmitter();
 })
 ```
 
 如果你是浏览器环境
 
 ```html
-<script src="node_modules/jslib_base/dist/index.aio.js"></script>
+<script src="node_modules/event_js/dist/index.aio.js"></script>
+
+<script>
+    var EventEmitter = event_js.EventEmitter;
+
+    var ec = new EventEmitter();
+</script>
 ```
 
 ## 文档
-[API](https://github.com/yanhaijing/jslib-base/blob/master/doc/api.md)
+[API](https://github.com/yanhaijing/event.js/blob/master/doc/api.md)
 
 ## 贡献指南
 首次运行需要先安装依赖
@@ -112,15 +112,9 @@ $ npm publish
 - test/browser/index.html 中的仓库名称
 
 ## 更新日志
-[CHANGELOG.md](https://github.com/yanhaijing/jslib-base/blob/master/CHANGELOG.md)
+[CHANGELOG.md](https://github.com/yanhaijing/event.js/blob/master/CHANGELOG.md)
 
 ## 计划列表
 [TODO.md](https://github.com/yanhaijing/jslib-base/blob/master/TODO.md)
 
 ## 谁在使用
-
-- [type.js](https://github.com/yanhaijing/type.js)
-- [is.js](https://github.com/yanhaijing/is.js)
-- [inherits.js](https://github.com/yanhaijing/inherits.js)
-- [guid.js](https://github.com/yanhaijing/guid.js)
-- [console.js](https://github.com/yanhaijing/console.js)
