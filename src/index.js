@@ -11,7 +11,7 @@ EventEmitter.prototype.addListener = function addListener(eventName, listener) {
         warn('addListener first param must is string');
         return this;
     }
-    if (!isString(listener)) {
+    if (!isFunction(listener)) {
         warn('addListener second param must is function');
         return this;
     }
@@ -21,22 +21,22 @@ EventEmitter.prototype.addListener = function addListener(eventName, listener) {
     this.eventMap[eventName].push(listener);
 
     return this;
-}
+};
 
 EventEmitter.prototype.on = function on(eventName, listener) {
-    return this.addListener(eventName, listener)
-}
+    return this.addListener(eventName, listener);
+};
 
 EventEmitter.prototype.once = function once(eventName, listener) {
     const fn = (...args) => {
-        this.off(event, fn);
+        this.removeListener(eventName, fn);
         listener.apply(this, args);
-    }
+    };
 
     fn.eventjsListener = listener;
 
-    return this.addListener(event, fn);
-}
+    return this.addListener(eventName, fn);
+};
 
 EventEmitter.prototype.removeListener = function removeListener(eventName, listener) {
     if (!isString(eventName)) {
@@ -44,7 +44,7 @@ EventEmitter.prototype.removeListener = function removeListener(eventName, liste
         return this;
     }
 
-    if (!isString(listener)) {
+    if (!isFunction(listener)) {
         warn('removeListener second param must is function');
         return this;
     }
@@ -66,11 +66,11 @@ EventEmitter.prototype.removeListener = function removeListener(eventName, liste
     }
 
     return this;
-}
+};
 
 EventEmitter.prototype.off = function off(eventName, listener) {
-    return this.removeListener(eventName, listener)
-}
+    return this.removeListener(eventName, listener);
+};
 
 EventEmitter.prototype.removeAllListeners = function removeAllListeners(eventName) {
     if (isUndefined(eventName)) {
@@ -86,7 +86,7 @@ EventEmitter.prototype.removeAllListeners = function removeAllListeners(eventNam
     delete this.eventMap[eventName];
 
     return this;
-}
+};
 
 EventEmitter.prototype.emit = function emit(eventName, ...args) {
     if (!isString(eventName)) {
@@ -106,15 +106,15 @@ EventEmitter.prototype.emit = function emit(eventName, ...args) {
     listeners.forEach(fn => fn.apply(this, args));
 
     return this;
-}
+};
 
 EventEmitter.prototype.listeners = function listeners(eventName) {
     if (!isString(eventName)) {
         warn('listeners first param must is string');
-        return this;
+        return [];
     }
 
     return (this.eventMap[eventName] || []).slice();
-}
+};
 
 export const eventCenter = new EventEmitter();
