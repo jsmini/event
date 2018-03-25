@@ -1,4 +1,4 @@
-# [event.js](https://github.com/yanhaijing/event.js) [![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/yanhaijing/jslib-base) [![npm](https://img.shields.io/badge/npm-0.1.1-orange.svg)](https://www.npmjs.com/package/event_js) [![Build Status](https://travis-ci.org/yanhaijing/event.js.svg?branch=master)](https://travis-ci.org/yanhaijing/event.js) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yanhaijing/event.js/blob/master/LICENSE)
+# [event.js](https://github.com/yanhaijing/event.js) [![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/yanhaijing/jslib-base) [![npm](https://img.shields.io/badge/npm-0.1.0-orange.svg)](https://www.npmjs.com/package/@yanhaijing/event_js) [![Build Status](https://travis-ci.org/yanhaijing/event.js.svg?branch=master)](https://travis-ci.org/yanhaijing/event.js) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yanhaijing/event.js/blob/master/LICENSE)
 最好用的事件发射器基类和事件中心
 
 ## 兼容性
@@ -29,13 +29,13 @@
 通过npm下载安装代码
 
 ```bash
-$ npm install --save event_js
+$ npm install --save @yanhaijing/event_js
 ```
 
 如果你是node环境
 
 ```js
-var EventEmitter = require('event_js').EventEmitter;
+var EventEmitter = require('@yanhaijing/event_js').EventEmitter;
 
 var ec = new EventEmitter();
 ```
@@ -43,7 +43,7 @@ var ec = new EventEmitter();
 如果你是webpack等环境
 
 ```js
-import { EventEmitter } from 'event_js';
+import { EventEmitter } from '@yanhaijing/event_js';
 
 var ec = new EventEmitter();
 ```
@@ -51,7 +51,7 @@ var ec = new EventEmitter();
 如果你是requirejs环境
 
 ```js
-requirejs(['node_modules/event_js/dist/index.aio.js'], function (event_js) {
+requirejs(['node_modules/@yanhaijing/event_js/dist/index.aio.js'], function (event_js) {
     var EventEmitter = event_js.EventEmitter;
 
     var ec = new EventEmitter();
@@ -61,7 +61,7 @@ requirejs(['node_modules/event_js/dist/index.aio.js'], function (event_js) {
 如果你是浏览器环境
 
 ```html
-<script src="node_modules/event_js/dist/index.aio.js"></script>
+<script src="node_modules/@yanhaijing/event_js/dist/index.aio.js"></script>
 
 <script>
     var EventEmitter = event_js.EventEmitter;
@@ -101,7 +101,7 @@ $ npm run release
 将新版本发布到npm
 
 ```bash
-$ npm publish
+$ npm publish --access=public
 ```
 
 可能需要你自己修改的地方如下：

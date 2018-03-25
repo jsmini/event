@@ -1,5 +1,5 @@
 {
-  "name": "event_js",
+  "name": "@yanhaijing/event_js",
   "version": "0.1.0",
   "description": "最好用的事件发射器基类和事件中心",
   "main": "dist/index.js",
