@@ -1,6 +1,6 @@
 import { isUndefined, isString, isFunction } from '@yanhaijing/is_js';
 
-import { warn } from './util';
+import { error } from './util';
 
 export function EventEmitter() {
     this.eventMap = {};
@@ -8,11 +8,11 @@ export function EventEmitter() {
 
 EventEmitter.prototype.addListener = function addListener(eventName, listener) {
     if (!isString(eventName)) {
-        warn('addListener first param must is string');
+        error('addListener first param must is string');
         return this;
     }
     if (!isFunction(listener)) {
-        warn('addListener second param must is function');
+        error('addListener second param must is function');
         return this;
     }
 
@@ -40,12 +40,12 @@ EventEmitter.prototype.once = function once(eventName, listener) {
 
 EventEmitter.prototype.removeListener = function removeListener(eventName, listener) {
     if (!isString(eventName)) {
-        warn('removeListener first param must is string');
+        error('removeListener first param must is string');
         return this;
     }
 
     if (!isFunction(listener)) {
-        warn('removeListener second param must is function');
+        error('removeListener second param must is function');
         return this;
     }
 
@@ -79,7 +79,7 @@ EventEmitter.prototype.removeAllListeners = function removeAllListeners(eventNam
     }
 
     if (!isString(eventName)) {
-        warn('removeAllListeners first param must is string');
+        error('removeAllListeners first param must is string');
         return this;
     }
 
@@ -90,7 +90,7 @@ EventEmitter.prototype.removeAllListeners = function removeAllListeners(eventNam
 
 EventEmitter.prototype.emit = function emit(eventName, ...args) {
     if (!isString(eventName)) {
-        warn('emit first param must is string');
+        error('emit first param must is string');
         return this;
     }
 
@@ -110,7 +110,7 @@ EventEmitter.prototype.emit = function emit(eventName, ...args) {
 
 EventEmitter.prototype.listeners = function listeners(eventName) {
     if (!isString(eventName)) {
-        warn('listeners first param must is string');
+        error('listeners first param must is string');
         return [];
     }
 
