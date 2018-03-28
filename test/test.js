@@ -16,8 +16,12 @@ describe('EventEmitter', function() {
         it('param & return', function() {
             var ec = new EventEmitter();
 
-            expect(ec.addListener()).to.equal(ec);
-            expect(ec.addListener('test')).to.equal(ec);
+            try {
+                ec.addListener()
+            } catch(e) {
+                expect(e.message).to.equal('addListener second param must is function');
+            }
+
             expect(ec.addListener('test', noop)).to.equal(ec);
         });
 
@@ -37,8 +41,12 @@ describe('EventEmitter', function() {
         it('param & return', function() {
             var ec = new EventEmitter();
 
-            expect(ec.on()).to.equal(ec);
-            expect(ec.on('test')).to.equal(ec);
+            try {
+                ec.on()
+            } catch(e) {
+                expect(e.message).to.equal('addListener second param must is function');
+            }
+
             expect(ec.on('test', noop)).to.equal(ec);
         });
 
@@ -58,8 +66,12 @@ describe('EventEmitter', function() {
         it('param & return', function() {
             var ec = new EventEmitter();
 
-            expect(ec.once()).to.equal(ec);
-            expect(ec.once('test')).to.equal(ec);
+            try {
+                ec.once()
+            } catch(e) {
+                expect(e.message).to.equal('once second param must is function');
+            }
+
             expect(ec.once('test', noop)).to.equal(ec);
         });
 
@@ -86,8 +98,12 @@ describe('EventEmitter', function() {
         it('param & return', function() {
             var ec = new EventEmitter();
 
-            expect(ec.removeListener()).to.equal(ec);
-            expect(ec.removeListener('test')).to.equal(ec);
+            try {
+                ec.removeListener()
+            } catch(e) {
+                expect(e.message).to.equal('removeListener second param must is function');
+            }
+
             expect(ec.removeListener('test', noop)).to.equal(ec);
         });
 
@@ -112,8 +128,12 @@ describe('EventEmitter', function() {
         it('param & return', function() {
             var ec = new EventEmitter();
 
-            expect(ec.off()).to.equal(ec);
-            expect(ec.off('test')).to.equal(ec);
+            try {
+                ec.off()
+            } catch(e) {
+                expect(e.message).to.equal('removeListener second param must is function');
+            }
+
             expect(ec.off('test', noop)).to.equal(ec);
         });
 
