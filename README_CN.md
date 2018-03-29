@@ -112,7 +112,7 @@ $ npm publish --access=public
 - test/browser/index.html 中的仓库名称
 
 ## 更新日志
-[CHANGELOG.md](https://github.com/yanhaijing/event.js/blob/master/CHANGELOG.md)
+[CHANGELOG.md](https://github.com/yanhaijing/event.js/blob/master/CHANGELOG_CN.md)
 
 ## 计划列表
 [TODO.md](https://github.com/yanhaijing/jslib-base/blob/master/TODO.md)

@@ -1,27 +1,27 @@
-# 变更日志
+# Change Log
 
 ## 0.4.0 / 2018-3-31
 
-- 原生支持ie6-8 
+- Native support ie6-8 
 
 ## 0.3.0 / 2018-3-31
 
-- 字符串参数自动转换，不再验证类型
-- 函数类型参数缺失将报一个异常
+- Automatic conversion of string parameters, no longer verifies type
+- A missing function type parameter will report an exception
 
 ## 0.2.0 / 2018-3-25
 
-- 参数错误改为error输出
+- Parameter mistakenly changed to output as an error
 
 ## 0.1.0 / 2018-3-1
 
-- 添加 EventEmitter 基类
-- 添加 EventEmitter#addListener()
-- 添加 EventEmitter#on()
-- 添加 EventEmitter#once()
-- 添加 EventEmitter#removeListener()
-- 添加 EventEmitter#off()
-- 添加 EventEmitter#removeAllListeners()
-- 添加 EventEmitter#emit()
-- 添加 EventEmitter#listeners()
-- 添加 eventCenter 事件中心实例
+- Add EventEmitter base class
+- Add EventEmitter#addListener()
+- Add EventEmitter#on()
+- Add EventEmitter#once()
+- Add EventEmitter#removeListener()
+- Add EventEmitter#off()
+- Add EventEmitter#removeAllListeners()
+- Add EventEmitter#emit()
+- Add EventEmitter#listeners()
+- Add eventCenter event center instance
