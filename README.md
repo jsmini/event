@@ -1,7 +1,7 @@
 # [event.js](https://github.com/yanhaijing/event.js) [![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/yanhaijing/jslib-base) [![npm](https://img.shields.io/badge/npm-0.4.0-orange.svg)](https://www.npmjs.com/package/@yanhaijing/event_js) [![Build Status](https://travis-ci.org/yanhaijing/event.js.svg?branch=master)](https://travis-ci.org/yanhaijing/event.js) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yanhaijing/event.js/blob/master/LICENSE)
 The best event emitter and center, native compatible IE6
 
-[Chinese README](./README_CN.md)
+[Chinese README](https://github.com/yanhaijing/event.js/blob/master/README_CN.md)
 
 ## Compatibility
 Unit tests guarantee support for the following environments:
