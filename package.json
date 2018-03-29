@@ -25,6 +25,7 @@
     "url": "https://github.com/yanhaijing/jslib-base/issues"
   },
   "devDependencies": {
+    "@yanhaijing/is_js": "0.2.0",
     "babel-core": "6.26.0",
     "babel-preset-env": "1.6.1",
     "es5-shim": "4.5.10",
@@ -36,7 +37,5 @@
     "rollup-plugin-commonjs": "8.3.0",
     "rollup-plugin-node-resolve": "3.0.3"
   },
-  "dependencies": {
-    "@yanhaijing/is_js": "0.1.0-1"
-  }
+  "dependencies": {}
 }
