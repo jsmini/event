@@ -3,8 +3,6 @@
 
 EventEmitter和eventCenter可以用来[解耦](http://yanhaijing.com/program/2016/09/01/about-coupling/)各个模块之间的关系
 
-**注意：**编译代码依赖ES5环境，对于ie6-8需要引入[es5-shim](http://github.com/es-shims/es5-shim/)才可以兼容，可以查看[demo/demo-global.html](../demo/demo-global.html)中的例子
-
 ## EventEmitter
 EventEmitter是一个事件发射器的基类，类似node中的EventEmitter，浏览器中的EventTarget，用处主要有两个，一个是实例化一个事件中心，一个是继承，给子类部署消息接口
 

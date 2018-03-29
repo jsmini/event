@@ -84,7 +84,9 @@ EventEmitter.prototype.emit = function emit(eventName, ...args) {
     // 锁死队列，避免无限循环
     listeners = listeners.slice();
 
-    listeners.forEach(fn => fn.apply(this, args));
+    for (var i = 0; i < listeners.length; i++) {
+        listeners[i].apply(this, args);
+    }
 
     return this;
 };
