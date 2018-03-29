@@ -1,6 +1,6 @@
 {
   "name": "@yanhaijing/event_js",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "最好用的事件发射器基类和事件中心",
   "main": "dist/index.js",
   "jsnext:main": "dist/index.esm.js",
