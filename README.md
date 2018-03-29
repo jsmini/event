@@ -1,8 +1,10 @@
 # [event.js](https://github.com/yanhaijing/event.js) [![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/yanhaijing/jslib-base) [![npm](https://img.shields.io/badge/npm-0.4.0-orange.svg)](https://www.npmjs.com/package/@yanhaijing/event_js) [![Build Status](https://travis-ci.org/yanhaijing/event.js.svg?branch=master)](https://travis-ci.org/yanhaijing/event.js) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yanhaijing/event.js/blob/master/LICENSE)
-最好用的事件发射器基类和事件中心
+The best event emitter and center, native compatible IE6
 
-## 兼容性
-单元测试保证支持如下环境：
+[Chinese README](./README_CN.md)
+
+## Compatibility
+Unit tests guarantee support for the following environments:
 
 - Node 0.12+
 - Safari 6+ (Mac)
@@ -12,27 +14,26 @@
 - Internet Explorer 6+ (Windows, Windows Phone)
 - Opera 10+ (Windows, linux, Android)
 
-## 目录介绍
+## Content Overview
 
 ```
-.
-├── demo 使用demo
-├── dist 编译产出代码
-├── doc 项目文档
-├── src 源代码目录
-├── test 单元测试
-├── CHANGELOG.md 变更日志
-└── TODO.md 计划功能
+├── demo - How to Use Demo
+├── dist - Compiling Output Code
+├── doc - Documents
+├── src - Source Code Directory
+├── test - Unit Tests
+├── CHANGELOG.md - Update Log
+└── TODO.md - Future Plans
 ```
 
-## 如何使用
-通过npm下载安装代码
+## How to Use
+Using npm, download and install the code. 
 
 ```bash
 $ npm install --save @yanhaijing/event_js
 ```
 
-如果你是node环境
+If you are in a node enviroment：
 
 ```js
 var EventEmitter = require('@yanhaijing/event_js').EventEmitter;
@@ -40,7 +41,7 @@ var EventEmitter = require('@yanhaijing/event_js').EventEmitter;
 var ec = new EventEmitter();
 ```
 
-如果你是webpack等环境
+If you are in a webpack or similar environment：
 
 ```js
 import { EventEmitter } from '@yanhaijing/event_js';
@@ -48,7 +49,7 @@ import { EventEmitter } from '@yanhaijing/event_js';
 var ec = new EventEmitter();
 ```
 
-如果你是requirejs环境
+If you are in a requirejs environment:
 
 ```js
 requirejs(['node_modules/@yanhaijing/event_js/dist/index.aio.js'], function (event_js) {
@@ -58,7 +59,7 @@ requirejs(['node_modules/@yanhaijing/event_js/dist/index.aio.js'], function (eve
 })
 ```
 
-如果你是浏览器环境
+If you are in a browser environment:
 
 ```html
 <script src="node_modules/@yanhaijing/event_js/dist/index.aio.js"></script>
@@ -70,51 +71,52 @@ requirejs(['node_modules/@yanhaijing/event_js/dist/index.aio.js'], function (eve
 </script>
 ```
 
-## 文档
+## 
 [API](https://github.com/yanhaijing/event.js/blob/master/doc/api.md)
 
-## 贡献指南
-首次运行需要先安装依赖
+## Contribution Guide
+For first time contributors, you need to install the dependencies first.
 
 ```bash
 $ npm install
 ```
 
-一键打包生成生产代码
+To build the project:
 
 ```bash
 $ npm run build
 ```
 
-运行单元测试，浏览器环境需要手动测试，位于`test/browser`
+To run unit tests: 
 
 ```bash
 $ npm test
 ```
+- Note: The browser environment needs to be tested manually under `test/browser`
 
-修改package.json中的版本号，修改README.md中的版本号，修改CHANGELOG.md，然后发布新版
+Modify the version number in package.json, modify the version number in README.md, modify the CHANGELOG.md, and then release the new version.
 
 ```bash
 $ npm run release
 ```
 
-将新版本发布到npm
+Publish the new version to NPM
 
 ```bash
 $ npm publish --access=public
 ```
 
-可能需要你自己修改的地方如下：
+You may need to modify the following files in your project：
 
-- README.md 中的信息
-- package.json 中的信息
-- config/rollup.js 中的信息
-- test/browser/index.html 中的仓库名称
+- The messages in README.md 
+- The messages in package.json
+- The messages in config/rollup.js
+- The repository name in test/browser/index.html
 
-## 更新日志
+## Update Log
 [CHANGELOG.md](https://github.com/yanhaijing/event.js/blob/master/CHANGELOG.md)
 
-## 计划列表
+## Future Plans
 [TODO.md](https://github.com/yanhaijing/jslib-base/blob/master/TODO.md)
 
-## 谁在使用
+## Current Users
