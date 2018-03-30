@@ -1,12 +1,14 @@
-# 文档
-包含事件发射器基类EventEmitter，和一个实例化的事件中心对象eventCenter，类似node中的EventEmitter
+# Document
+Contains the event emitter base class EventEmitter, and an instantiated event center object eventCenter, similar to the EventEmitter in a node.
 
-EventEmitter和eventCenter可以用来[解耦](http://yanhaijing.com/program/2016/09/01/about-coupling/)各个模块之间的关系
+eventEmitter and eventCenter can be used to [decouple](http://yanhaijing.com/program/2016/09/01/about-coupling/) the relationships between the various modules.
+
+[Chinese README 中文版本](https://github.com/yanhaijing/event.js/blob/master/api_CN.md)
 
 ## EventEmitter
-EventEmitter是一个事件发射器的基类，类似node中的EventEmitter，浏览器中的EventTarget，用处主要有两个，一个是实例化一个事件中心，一个是继承，给子类部署消息接口
+EventEmitter is the base class of event emitter similar to an EventEmitter in a node, and an EventTarget in a browser. There are two main purposes of an EventEmitter, one is to instantiate an event center, the other is inheritance, providing subclasses with a message interface.
 
-事件中心的例子
+An example of the event center:
 ```js
 var ec = new EventEmitter();
 
@@ -17,7 +19,7 @@ ec.on('test', function (msg) {
 ec.emit('test', 123);
 ```
 
-继承的例子
+An example of inheritance:
 
 ```js
 class MyEvent extends EventEmitter {
@@ -33,7 +35,7 @@ me.on('test', function (msg) {
 me.emit('test', 123);
 ```
 
-对于不支持ES6环境的情况，可以使用[inherits.js](https://github.com/yanhaijing/inherits.js)
+For cases where the ES6 environment is not supported, [inherits.js](https://github.com/yanhaijing/inherits.js) can be used.
 
 ```js
 function MyEvent() {
@@ -51,14 +53,14 @@ me.on('test', function (msg) {
 me.emit('test', 123);
 ```
 
-每一个EventEmitter的实例会有下面的所有方法，下面单独介绍每个API
+Every EventEmitter instance has all of the following methods. Each of the APIs are described below.
 
 ### EventEmitter#addListener
-添加一个事件
+Add an event
 
-- param {string} eventName 事件名称
-- param {function} listener 方法函数
-- return {object} EventEmitter的实例，支持链式调用
+- param {string} eventName - event name
+- param {function} listener - Function
+- return {object} EventEmitter - instance of EventEmitter, which supports chain calling
 
 ```js
 var ec = new EventEmitter();
@@ -68,27 +70,27 @@ ec.addListener('test2', function () { // xxx });
 ```
 
 ### EventEmitter#on
-on方法是addListener方法的一个别名，参数和用法同addListener
+The "on" method is an alias of the addListener method. The oarameters and usage are the same as addListener.
 
 ### EventEmitter#once
-once的功能也是添加一个事件，但是添加的事件只会被调用一次
+The function of "once" is also to add an event, but the added event will only be called once. 
 
-- param {string} eventName 事件名称
-- param {function} listener 方法函数
-- return {object} EventEmitter的实例，支持链式调用
+- param {string} eventName - event name
+- param {function} listener - Function
+- return {object} EventEmitter - instance of EventEmitter, which supports chain calling
 
 ```js
 var ec = new EventEmitter();
 
-ec.once('test1', function () { // xxx }); // 回调函数只会被调用一次
+ec.once('test1', function () { // xxx }); // Callback function will only be invoked once
 ```
 
 ### EventEmitter#removeListener
-removeListener用来删除指定的事件的回调
+removeListener is used to delete the callback of the specified event.
 
-- param {string} eventName 事件名称
-- param {function} listener 方法函数
-- return {object} EventEmitter的实例，支持链式调用
+- param {string} eventName - event name
+- param {function} listener - Function
+- return {object} EventEmitter - instance of EventEmitter, which supports chain calling
 
 ```js
 var ec = new EventEmitter();
@@ -99,38 +101,38 @@ ec.on('test1', cb);
 ec.removeListener('test1', cb);
 ```
 
-removeListener 最多只会从监听器数组里移除一个监听器实例。 如果任何单一的监听器被多次添加到指定 eventName 的监听器数组中，则必须多次调用 removeListener 才能移除每个实例
+RemoveListener will only remove at most one listener instance from the listener array. If any single listener is added many times to the listener array of the specified eventName, then removeListener must be called many times to remove every instance.
 
-**注意：**一旦一个事件被触发，所有绑定到它的监听器都会按顺序依次触发。这意味着，在事件触发后、最后一个监听器完成执行前，任何 removeListener() 或 removeAllListeners() 调用都不会从 emit() 中移除它们。 随后的事件会像预期的那样发生
+** Note: ** once an event is triggered, all the listeners bound to it will be triggered sequentially. This means that any removeListener () or removeAllListeners () call will not remove them from emit () before the event triggers and the last listener is executed. Subsequent events will happen as expected.
 
 ### EventEmitter#off
-off方法是removeListener方法的一个别名，参数和用法同removeListener
+The off method is an alias of the removeListener method, and the parameters and usage are the same as removeListener. 
 
 ### EventEmitter#removeAllListeners
-移除全部或指定 eventName 的监听器
+Remove all or the specified eventName listener。
 
-- param {string} [eventName] 事件名称
-- return {object} EventEmitter的实例，支持链式调用
+- param {string} eventName - event name
+- return {object} EventEmitter - instance of EventEmitter, which supports chain calling
 
 ```js
 var ec = new EventEmitter();
 
-ec.removeAllListeners('test1'); // 移除指定的事件
-ec.removeAllListeners(); // 溢出全部的事件
+ec.removeAllListeners('test1'); // remove the specified event
+ec.removeAllListeners(); // overflow all events
 ```
 
 ### EventEmitter#emit
-按监听器的注册顺序，同步地调用每个注册到名为 eventName 事件的监听器，并传入提供的参数
+Synchronously invoke each listener registered as a eventName event and pass in the provided parameters, according to the registration order of the listener.
 
-- param {string} [eventName] 事件名称
-- param {xxx} [xxx] 传递的参数
-- return {object} EventEmitter的实例，支持链式调用
+- param {string} eventName - event name
+- param {function} listener - Function
+- return {object} EventEmitter - instance of EventEmitter, which supports chain calling
 
 ```js
 var ec = new EventEmitter();
 
 ec.on('test', function (x, y, z) {
-    console.log(x, y, z); // emit时传入的参数
+    console.log(x, y, z); // emit incoming parameters
 });
 
 ec.emit('test', 1, 2, 3); // log 1, 2, 3
@@ -138,10 +140,10 @@ ec.emit('test', 4, 5, 6); // log 4, 5, 6
 ```
 
 ### EventEmitter#listeners
-返回名为 eventName 的事件的监听器数组的副本
+Returns a copy of the listener array of events called eventName.
 
-- param {string} eventName 事件名称
-- return {array} 事件的监听器数组
+- param {string} eventName - Event name
+- return {array} - array of listener events
 
 ```js
 var ec = new EventEmitter();
@@ -154,7 +156,7 @@ ec.listeners('test'); // [fn1]
 ```
 
 ## eventCenter
-eventCenter是EventEmitter的一个实例，可以直接拿来做事件中心，消息中心使用
+eventCenter is an instance of EventEmitter, which can be used directly as an event center for use by the message center. 
 
 ```js
 // a.js
