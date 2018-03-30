@@ -71,7 +71,7 @@ requirejs(['node_modules/@yanhaijing/event_js/dist/index.aio.js'], function (eve
 ```
 
 ## 文档
-[API](https://github.com/yanhaijing/event.js/blob/master/doc/api.md)
+[API](https://github.com/yanhaijing/event.js/blob/master/doc/api_CN.md)
 
 ## 贡献指南
 首次运行需要先安装依赖
