@@ -1,15 +1,15 @@
 var pkg = require('../package.json');
 
-// 兼容 event.js 和 @yanhaijing/event.js 
-var name = pkg.name.split('/').pop();
+// 兼容 event.js 和 @jsmini/event 
+var name = pkg.name.replace('@', '').replace(/\//g, '_');
 var version = pkg.version;
 
 var banner = 
 `/*!
- * event.js ${version} (https://github.com/yanhaijing/event.js)
- * API https://github.com/yanhaijing/event.js/blob/master/doc/api.md
+ * event ${version} (https://github.com/jsmini/event)
+ * API https://github.com/jsmini/event/blob/master/doc/api.md
  * Copyright 2017-${(new Date).getFullYear()} yanhaijing. All Rights Reserved
- * Licensed under MIT (https://github.com/yanhaijing/event.js/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/jsmini/event/blob/master/LICENSE)
  */
 `;
 

@@ -1,6 +1,6 @@
 var expect = require('expect.js');
 
-var isArray = require('@yanhaijing/is_js').isArray;
+var isArray = require('@jsmini/is').isArray;
 
 var EventEmitter = require('../dist/index.js').EventEmitter;
 var eventCenter = require('../dist/index.js').eventCenter;

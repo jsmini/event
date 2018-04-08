@@ -1,4 +1,4 @@
-import { isUndefined, isFunction } from '@yanhaijing/is_js';
+import { isUndefined, isFunction } from '@jsmini/is';
 
 export function EventEmitter() {
     this.eventMap = {};

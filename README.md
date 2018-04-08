@@ -1,7 +1,7 @@
-# [event.js](https://github.com/yanhaijing/event.js) [![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/yanhaijing/jslib-base) [![npm](https://img.shields.io/badge/npm-0.4.0-orange.svg)](https://www.npmjs.com/package/@yanhaijing/event_js) [![Build Status](https://travis-ci.org/yanhaijing/event.js.svg?branch=master)](https://travis-ci.org/yanhaijing/event.js) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yanhaijing/event.js/blob/master/LICENSE)
+# [event](https://github.com/jsmini/event) [![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/yanhaijing/jslib-base) [![npm](https://img.shields.io/badge/npm-0.4.0-orange.svg)](https://www.npmjs.com/package/@jsmini/event) [![Build Status](https://travis-ci.org/jsmini/event.svg?branch=master)](https://travis-ci.org/jsmini/event) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jsmini/event/blob/master/LICENSE)
 The best event emitter and center, native compatible IE6
 
-[Chinese README](https://github.com/yanhaijing/event.js/blob/master/README_CN.md)
+[Chinese README](https://github.com/jsmini/event/blob/master/README_CN.md)
 
 ## Compatibility
 Unit tests guarantee support for the following environments:
@@ -30,13 +30,13 @@ Unit tests guarantee support for the following environments:
 Using npm, download and install the code. 
 
 ```bash
-$ npm install --save @yanhaijing/event_js
+$ npm install --save @jsmini/event
 ```
 
 If you are in a node enviroment：
 
 ```js
-var EventEmitter = require('@yanhaijing/event_js').EventEmitter;
+var EventEmitter = require('@jsmini/event').EventEmitter;
 
 var ec = new EventEmitter();
 ```
@@ -44,7 +44,7 @@ var ec = new EventEmitter();
 If you are in a webpack or similar environment：
 
 ```js
-import { EventEmitter } from '@yanhaijing/event_js';
+import { EventEmitter } from '@jsmini/event';
 
 var ec = new EventEmitter();
 ```
@@ -52,8 +52,8 @@ var ec = new EventEmitter();
 If you are in a requirejs environment:
 
 ```js
-requirejs(['node_modules/@yanhaijing/event_js/dist/index.aio.js'], function (event_js) {
-    var EventEmitter = event_js.EventEmitter;
+requirejs(['node_modules/@jsmini/event/dist/index.aio.js'], function (jsmini_event) {
+    var EventEmitter = jsmini_event.EventEmitter;
 
     var ec = new EventEmitter();
 })
@@ -62,17 +62,17 @@ requirejs(['node_modules/@yanhaijing/event_js/dist/index.aio.js'], function (eve
 If you are in a browser environment:
 
 ```html
-<script src="node_modules/@yanhaijing/event_js/dist/index.aio.js"></script>
+<script src="node_modules/@jsmini/event/dist/index.aio.js"></script>
 
 <script>
-    var EventEmitter = event_js.EventEmitter;
+    var EventEmitter = jsmini_event.EventEmitter;
 
     var ec = new EventEmitter();
 </script>
 ```
 
 ## 
-[API](https://github.com/yanhaijing/event.js/blob/master/doc/api.md)
+[API](https://github.com/jsmini/event/blob/master/doc/api.md)
 
 ## Contribution Guide
 For first time contributors, you need to install the dependencies first.
@@ -114,9 +114,9 @@ You may need to modify the following files in your project：
 - The repository name in test/browser/index.html
 
 ## Update Log
-[CHANGELOG.md](https://github.com/yanhaijing/event.js/blob/master/CHANGELOG.md)
+[CHANGELOG.md](https://github.com/jsmini/event/blob/master/CHANGELOG.md)
 
 ## Future Plans
-[TODO.md](https://github.com/yanhaijing/jslib-base/blob/master/TODO.md)
+[TODO.md](https://github.com/jsmini/event/blob/master/TODO.md)
 
 ## Current Users
