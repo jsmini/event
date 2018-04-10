@@ -49,6 +49,7 @@ EventEmitter.prototype.removeListener = function removeListener(eventName, liste
     for (let i = 0; i < listeners.length; i++) {
         if (listeners[i] === listener || listeners[i].eventjsListener === listener) {
             listeners.splice(i, 1);
+            break; // 同一个函数多次绑定，每次只移除一个
         }
     }
 
