@@ -1,4 +1,4 @@
-# [event](https://github.com/jsmini/event) [![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/yanhaijing/jslib-base) [![npm](https://img.shields.io/badge/npm-0.5.0-orange.svg)](https://www.npmjs.com/package/@jsmini/event) [![Build Status](https://travis-ci.org/jsmini/event.svg?branch=master)](https://travis-ci.org/jsmini/event) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jsmini/event/blob/master/LICENSE)
+# [event](https://github.com/jsmini/event) [![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/yanhaijing/jslib-base) [![npm](https://img.shields.io/badge/npm-0.5.1-orange.svg)](https://www.npmjs.com/package/@jsmini/event) [![Build Status](https://travis-ci.org/jsmini/event.svg?branch=master)](https://travis-ci.org/jsmini/event) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jsmini/event/blob/master/LICENSE)
 最好用的事件发射器基类和事件中心，原生兼容IE6
 
 ## 兼容性

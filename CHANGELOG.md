@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.5.1 / 2018-4-6
+
+- fix removeListener multiple add for the same function, all removed bugs
+
 ## 0.5.0 / 2018-4-6
 
 - transfer project and rename
