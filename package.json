@@ -1,6 +1,6 @@
 {
   "name": "@jsmini/event",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "最好用的事件发射器基类和事件中心",
   "main": "dist/index.js",
   "jsnext:main": "dist/index.esm.js",

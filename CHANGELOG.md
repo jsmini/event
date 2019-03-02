@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.6.0 / 2019-3-2
+
+- Add .d.ts，support ts call
+
 ## 0.5.1 / 2018-4-6
 
 - fix removeListener multiple add for the same function, all removed bugs
