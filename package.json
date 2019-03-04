@@ -1,6 +1,6 @@
 {
   "name": "@jsmini/event",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "最好用的事件发射器基类和事件中心",
   "main": "dist/index.js",
   "jsnext:main": "dist/index.esm.js",
@@ -53,6 +53,6 @@
     "rollup-plugin-node-resolve": "3.0.3"
   },
   "dependencies": {
-    "@jsmini/is": "0.4.0"
+    "@jsmini/is": "^0.8.1"
   }
 }

@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.6.1 / 2019-3-4
+
+- fix: fix deps not auto update
+
 ## 0.6.0 / 2019-3-2
 
 - Add .d.ts，support ts call
