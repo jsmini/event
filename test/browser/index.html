@@ -10,9 +10,9 @@
 
 <body>
     <div id="mocha"></div>
+    <script src="../../node_modules/es5-shim/es5-shim.js"></script>
+    <script src="../../node_modules/es5-shim/es5-sham.js"></script>
     
-    <script src="../../node_modules/@jsmini/is/dist/index.aio.js"></script>
-
     <script src="../../node_modules/mocha/mocha.js"></script>
     <script src="../../node_modules/expect.js/index.js"></script>
     <script>
@@ -22,8 +22,7 @@
     <script>
         var libs = {
             'expect.js': expect,
-            '../dist/index.js': jsmini_event,
-            '@jsmini/is': jsmini_is,
+            '../src/index.js': window['jsmini_event']
         };
         var require = function(path) {
             return libs[path];

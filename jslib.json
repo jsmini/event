@@ -1,0 +1,9 @@
+{
+    "name": "event",
+    "npmname": "@jsmini/event",
+    "umdname": "jsmini_event",
+    "username": "jsmini",
+    "type": "js",
+    "lang": "zh",
+    "version": "1.3.0"
+}
