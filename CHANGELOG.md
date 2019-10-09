@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.6.2 / 2019-10-10
+
+- fix: npm miss d.ts file
+
 ## 0.6.1 / 2019-3-4
 
 - fix: fix deps not auto update
