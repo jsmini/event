@@ -1,7 +1,7 @@
 {
   "name": "@jsmini/event",
-  "version": "0.6.3",
-  "description": "最好用的事件发射器基类和事件中心",
+  "version": "0.7.0",
+  "description": "The best event emitter base class and event center.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "scripts": {

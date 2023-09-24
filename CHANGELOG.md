@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.7.0 / 2023-9-24
+
+- Upgrade to the latest version of jslib-base
+- Support for Node.js ESM
+- Upgrade @jsmini/is
+
 ## 0.6.2 / 2019-10-10
 
 - fix: npm miss d.ts file
