@@ -1,20 +1,21 @@
 # [event](https://github.com/jsmini/event)
+
 [![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/yanhaijing/jslib-base)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jsmini/event/blob/master/LICENSE)
-[![Build Status](https://travis-ci.org/jsmini/event.svg?branch=master)](https://travis-ci.org/jsmini/event)
-[![Coveralls](https://img.shields.io/coveralls/jsmini/event.svg)](https://coveralls.io/github/jsmini/event)
+[![CI](https://github.com/jsmini/event/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/jsmini/event/actions/workflows/ci.yml)
 [![npm](https://img.shields.io/badge/npm-0.6.3-orange.svg)](https://www.npmjs.com/package/@jsmini/event)
 [![NPM downloads](http://img.shields.io/npm/dm/@jsmini/event.svg?style=flat-square)](http://www.npmtrends.com/@jsmini/event)
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/jsmini/event.svg)](http://isitmaintained.com/project/jsmini/event "Percentage of issues still open")
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/jsmini/event.svg)](http://isitmaintained.com/project/jsmini/event 'Percentage of issues still open')
 
 最好用的事件发射器基类和事件中心，原生兼容IE6
 
 ## 兼容性
+
 单元测试保证支持如下环境：
 
-| IE   | CH   | FF   | SF   | OP   | IOS  | 安卓   | Node  |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ----- |
-| 6+   | 23+  | 4+   | 6+   | 10+  | 5+   | 2.3+ | 0.10+ |
+| IE  | CH  | FF  | SF  | OP  | IOS | 安卓 | Node  |
+| --- | --- | --- | --- | --- | --- | ---- | ----- |
+| 6+  | 23+ | 4+  | 6+  | 10+ | 5+  | 2.3+ | 0.10+ |
 
 ## 目录介绍
 
@@ -30,6 +31,7 @@
 ```
 
 ## 如何使用
+
 通过npm下载安装代码
 
 ```bash
@@ -55,11 +57,14 @@ var ec = new EventEmitter();
 如果你是requirejs环境
 
 ```js
-requirejs(['node_modules/@jsmini/event/dist/index.aio.js'], function (jsmini_event) {
+requirejs(
+  ['node_modules/@jsmini/event/dist/index.aio.js'],
+  function (jsmini_event) {
     var EventEmitter = jsmini_event.EventEmitter;
 
     var ec = new EventEmitter();
-})
+  },
+);
 ```
 
 如果你是浏览器环境
@@ -68,16 +73,18 @@ requirejs(['node_modules/@jsmini/event/dist/index.aio.js'], function (jsmini_eve
 <script src="node_modules/@jsmini/event/dist/index.aio.js"></script>
 
 <script>
-    var EventEmitter = jsmini_event.EventEmitter;
+  var EventEmitter = jsmini_event.EventEmitter;
 
-    var ec = new EventEmitter();
+  var ec = new EventEmitter();
 </script>
 ```
 
 ## 文档
+
 [API](https://github.com/jsmini/event/blob/master/doc/api_CN.md)
 
 ## 贡献指南
+
 首次运行需要先安装依赖
 
 ```bash
@@ -116,9 +123,11 @@ $ npm publish --access=public
 - test/browser/index.html 中的仓库名称
 
 ## 更新日志
+
 [CHANGELOG.md](https://github.com/jsmini/event/blob/master/CHANGELOG_CN.md)
 
 ## 计划列表
+
 [TODO.md](https://github.com/jsmini/event/blob/master/TODO.md)
 
 ## 谁在使用

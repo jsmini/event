@@ -1,17 +1,18 @@
 # [event](https://github.com/jsmini/event)
+
 [![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/yanhaijing/jslib-base)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jsmini/event/blob/master/LICENSE)
-[![Build Status](https://travis-ci.org/jsmini/event.svg?branch=master)](https://travis-ci.org/jsmini/event)
-[![Coveralls](https://img.shields.io/coveralls/jsmini/event.svg)](https://coveralls.io/github/jsmini/event)
+[![CI](https://github.com/jsmini/event/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/jsmini/event/actions/workflows/ci.yml)
 [![npm](https://img.shields.io/badge/npm-0.6.3-orange.svg)](https://www.npmjs.com/package/@jsmini/event)
 [![NPM downloads](http://img.shields.io/npm/dm/@jsmini/event.svg?style=flat-square)](http://www.npmtrends.com/@jsmini/event)
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/jsmini/event.svg)](http://isitmaintained.com/project/jsmini/event "Percentage of issues still open")
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/jsmini/event.svg)](http://isitmaintained.com/project/jsmini/event 'Percentage of issues still open')
 
 The best event emitter and center, native compatible IE6
 
 [Chinese README](https://github.com/jsmini/event/blob/master/README_CN.md)
 
 ## Compatibility
+
 Unit tests guarantee support for the following environments:
 
 - Node 0.12+
@@ -35,7 +36,8 @@ Unit tests guarantee support for the following environments:
 ```
 
 ## How to Use
-Using npm, download and install the code. 
+
+Using npm, download and install the code.
 
 ```bash
 $ npm install --save @jsmini/event
@@ -60,11 +62,14 @@ var ec = new EventEmitter();
 If you are in a requirejs environment:
 
 ```js
-requirejs(['node_modules/@jsmini/event/dist/index.aio.js'], function (jsmini_event) {
+requirejs(
+  ['node_modules/@jsmini/event/dist/index.aio.js'],
+  function (jsmini_event) {
     var EventEmitter = jsmini_event.EventEmitter;
 
     var ec = new EventEmitter();
-})
+  },
+);
 ```
 
 If you are in a browser environment:
@@ -73,16 +78,18 @@ If you are in a browser environment:
 <script src="node_modules/@jsmini/event/dist/index.aio.js"></script>
 
 <script>
-    var EventEmitter = jsmini_event.EventEmitter;
+  var EventEmitter = jsmini_event.EventEmitter;
 
-    var ec = new EventEmitter();
+  var ec = new EventEmitter();
 </script>
 ```
 
-## 
+##
+
 [API](https://github.com/jsmini/event/blob/master/doc/api.md)
 
 ## Contribution Guide
+
 For first time contributors, you need to install the dependencies first.
 
 ```bash
@@ -95,11 +102,12 @@ To build the project:
 $ npm run build
 ```
 
-To run unit tests: 
+To run unit tests:
 
 ```bash
 $ npm test
 ```
+
 - Note: The browser environment needs to be tested manually under `test/browser`
 
 Modify the version number in package.json, modify the version number in README.md, modify the CHANGELOG.md, and then release the new version.
@@ -116,15 +124,17 @@ $ npm publish --access=public
 
 You may need to modify the following files in your project：
 
-- The messages in README.md 
+- The messages in README.md
 - The messages in package.json
 - The messages in config/rollup.js
 - The repository name in test/browser/index.html
 
 ## Update Log
+
 [CHANGELOG.md](https://github.com/jsmini/event/blob/master/CHANGELOG.md)
 
 ## Future Plans
+
 [TODO.md](https://github.com/jsmini/event/blob/master/TODO.md)
 
 ## Current Users

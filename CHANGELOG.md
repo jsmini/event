@@ -22,7 +22,7 @@
 
 ## 0.4.0 / 2018-3-31
 
-- Native support ie6-8 
+- Native support ie6-8
 
 ## 0.3.0 / 2018-3-31
 
