@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.8.0 / 2023-11-19
+
+- Upgrade jslib-base 2.3.2
+- Support sourceMap
+- fix: supports node >= 14.0.0
+
 ## 0.7.0 / 2023-9-24
 
 - Upgrade to the latest version of jslib-base
